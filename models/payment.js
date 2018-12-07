@@ -1,29 +1,36 @@
 module.exports = function (sequelize, DataTypes) {
-    return sequelize.define('product', {
-        nameOfProduct: {
+    return sequelize.define('payment', {
+        nameOfCompany: {
+            type: DataTypes.STRING,
+            allownull: false,
+            unique: false,
+        },
+        cardNumber: {
             type: DataTypes.STRING,
             allownull: false,
             unique: true,
+            validate: {
+                min: 16,
+                max: 16,
+            },
         },
-        typeOfProduct: {
+        cardVerificationCode: {
             type: DataTypes.STRING,
             allownull: false,
             unique: true,
+            validate: {
+                min: 3,
+                max: 3,
+            },
         },
-        companyName: {
+        expirationDate: {
             type: DataTypes.STRING,
             allownull: false,
             unique: false,
         },
-        priceOfProduct: {
+        cardOwner: {
             type: DataTypes.STRING,
             allownull: false,
-            unique: false,
-        },
-        quantity: {
-            type: DataTypes.STRING,
-            allownull: false,
-            unique: false,
         }
     })
 }
