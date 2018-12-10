@@ -38,7 +38,7 @@ router.put('/edit/:id', function (req, res) {
     .catch(err => res.json(req.errors))
 });
 
-router.delete('/delete/id', function (req, res) {
+router.delete('/delete/:id', function (req, res) {
     Product.findById(req.params.id).then(product => {
         if (product === undefined) {
             res.send(500, 'Product not found, please try again.')
@@ -60,3 +60,5 @@ router.delete('/delete/id', function (req, res) {
         }
     });
 });
+
+module.exports = router;

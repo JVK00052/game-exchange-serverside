@@ -3,12 +3,12 @@ module.exports = function (sequelize, DataTypes) {
         nameOfProduct: {
             type: DataTypes.STRING,
             allownull: false,
-            unique: true,
+            unique: false,
         },
         typeOfProduct: {
             type: DataTypes.STRING,
             allownull: false,
-            unique: true,
+            unique: false,
         },
         companyName: {
             type: DataTypes.STRING,

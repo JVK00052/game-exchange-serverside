@@ -6,7 +6,7 @@ var Profile = sequelize.import('../models/profile');
 router.post('/createnew', function(req, res) {
     Profile.create({
         owner: req.user.id,
-        firstName: req.body.profile.firstname,
+        firstName: req.body.profile.firstName,
         lastName: req.body.profile.lastName,
         screenName: req.body.profile.screenName,
         email: req.body.profile.email,
