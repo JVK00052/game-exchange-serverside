@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    return sequelize.define('user', {
+    const User = sequelize.define('user', {
         username: { 
             type: DataTypes.STRING,
             allowNull: false,
@@ -15,4 +15,9 @@ module.exports = function (sequelize, DataTypes) {
             defaultValue: false,
         }
     })
+    User.associate = Payment => {
+        User.hasMany(Payment, {foreignKey: 'id'})
+     }
+
+    return User
 }

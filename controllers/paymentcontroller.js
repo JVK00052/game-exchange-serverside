@@ -1,9 +1,10 @@
+require('dotenv').config()
 var express = require('express');
 var router = express.Router();
 var sequelize = require('../db');
 var Payment = sequelize.import('../models/payment');
 
-router.post('/createnew', function (req, res) {
+router.post('/createnew', function (req, res,) {
     Payment.create({
         nameOfCompany: req.body.payment.nameOfCompany,
         cardNumber: req.body.payment.cardNumber,
@@ -13,7 +14,7 @@ router.post('/createnew', function (req, res) {
     }).then(
         function createSuccess(payment) {
             res.status(200).json({
-                payment: payment,
+                Payment: payment,
                 message: 'Your payment method has been added.',
             })
         },
@@ -29,6 +30,13 @@ router.get('/getall', function (req, res) {
                 res.status(200).json({ payment })
             });
 });
+
+router.get('/byid/:id', function(req,res){
+    var data = req.params.id;
+    Payment.findOne({where: { id: data}})
+    .then(data => res.status(200).json(data))
+    .catch(err => res.status(500).json({error: err}))
+})
 
 router.put('/edit/:id', function (req, res) {
     Payment.update(req.body.payment, { where: { id: req.params.id } })
