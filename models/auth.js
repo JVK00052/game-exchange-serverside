@@ -14,10 +14,9 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true,
             defaultValue: false,
         }
-    })
-    User.associate = Payment => {
-        User.hasMany(Payment, {foreignKey: 'id'})
+    });
+    User.associate = models => {
+        User.hasMany(models, {foreignKey: ['payment']})
      }
-
     return User
 }

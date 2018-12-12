@@ -12,4 +12,12 @@ sequelize.authenticate().then(
         console.log(err)
     }
 );
+
+const User = sequelize.import('./models/auth');
+const Payment = sequelize.import('./models/payment');
+
+User.hasMany(Payment)
+
+Payment.belongsTo(User)
+
 module.exports = sequelize;

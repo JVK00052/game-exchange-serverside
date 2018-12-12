@@ -32,6 +32,13 @@ router.get('/getall', function (req, res) {
     );
 });
 
+router.get('/byid/:id', function(req,res){
+    var data = req.params.id;
+    Product.findOne({where: { id: data}})
+    .then(data => res.status(200).json(data))
+    .catch(err => res.status(500).json({error: err}))
+});
+
 router.put('/edit/:id', function (req, res) {
     Product.update(req.body.product, { where: { id: req.params.id } } )
     .then(product => res.status(200).json(product))

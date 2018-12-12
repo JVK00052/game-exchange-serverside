@@ -6,13 +6,14 @@ var Payment = sequelize.import('../models/payment');
 
 router.post('/createnew', function (req, res,) {
     Payment.create({
+        userId: req.user.id,
         nameOfCompany: req.body.payment.nameOfCompany,
         cardNumber: req.body.payment.cardNumber,
         cardVerification: req.body.payment.cardVerification,
         expirationDate: req.body.payment.expirationDate,
         cardOwner: req.body.payment.cardOwner,
     }).then(
-        function createSuccess(payment) {
+        function createSuccess(payment) {  
             res.status(200).json({
                 Payment: payment,
                 message: 'Your payment method has been added.',

@@ -24,11 +24,9 @@ module.exports = function (sequelize, DataTypes) {
             allownull: false,
             unique: false,
         }
-    })
-    Payment.associate = User => {
-        Payment.belongsTo(User, {foreignKey:'userId'})
+    });
+    Payment.associate = models => {
+        Payment.belongsTo(models, {foreignKey: ['user']})
     }
-
-
     return Payment;
 }
