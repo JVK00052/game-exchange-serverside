@@ -23,6 +23,13 @@ router.post('/createnew', function(req, res) {
         });
 });
 
+router.get('/byid/:id', function(req,res){
+    var data = req.params.id;
+    Profile.findOne({where: { id: data}})
+    .then(data => res.status(200).json(data))
+    .catch(err => res.status(500).json({error: err}))
+});
+
 router.get('/getall', function (req, res) {
     Profile.findAll()
     .then(
