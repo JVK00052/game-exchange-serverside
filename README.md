@@ -101,8 +101,6 @@ module.exports = function (sequelize, DataTypes) {
          ![](images/image2.png)
     - Now Press Send and you should see the following:
          ![](images/image3.png)
-    - To verify that we created this user, lets check pgAdmin
-### Creating Products, Profiles, and Payments
 
 ### Database Association
 
