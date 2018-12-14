@@ -46,18 +46,11 @@ This application handles many web development processes such as Admin vs User ro
 
 1. Create a new folder in your preferred Code Editor
 
-2. Clone the [Nail'd It-Clientside](https://github.com/JVK00052/nail-dit-clientside) and [Nail'd It-Serverside](https://github.com/JVK00052/nail-dit-serverside) Repository to the new folder you created
+2. Clone the [Nail'd It-Serverside](https://github.com/JVK00052/nail-dit-serverside) Repository to the new folder you created
 
 3. Within your Code Editor terminal, CD into the new folder and then CD into "nail-dit-serverside" and run the following command```npm install```. This will add the folder ```node_modules``` to your folder structure, this will allow the backend to run smoothly.
 
 4. In the same Code Editor terminal you CD'd into, run the command ```nodemon index.js```. This will run the server.
-
-5. Now, within your Code Editor terminal, CD into the new folder and then CD into "nail-dit-clientside" and run the following command```npm install```. This will update the current package.json and it's dependencies and add a folder named "node_modules", this will allow you to run the frontend smoothly.
-
-6. Now, in the same Code Editor terminal you CD'd into, run the command ```ng serve -o```. This will open a new window in your default browser with the clientside application running.
-    - Note! it may ask you the following within your terminal: ```? Something is already running on port 3000. Would you like to run the app on another port instead? (Y/n)```. 
-
-    - Input ```Y``` and press enter. It asks you this because your backend-server is already running on Local Host Port:3000. This will start the frontend-server on Port:3001 so there is no conflict.
     
 # Tutorials
 ### Setting up admin vs user roles
