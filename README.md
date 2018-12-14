@@ -87,10 +87,13 @@ module.exports = function (sequelize, DataTypes) {
     });
 ```
 2. Here's the solution!
-    - Open up the Postman Application
-        You should see this:
+    - Open up the Postman Application -> You should see this:
         ![](images/image.png)
-    - 
+    - We have to do a few things in order to create an admin role
+            Change `Get` to `Post`
+            type: "http://localhost:3000/users/signup
+         ![](images/
+     
 ### Creating Products, Profiles, and Payments
 
 ### Signing up vs Logging in
