@@ -93,7 +93,7 @@ module.exports = function (sequelize, DataTypes) {
             1. Change `Get` to `Post`
             2. type: "http://localhost:3000/users/signup
             3. switch `none` to `raw`
-         ![](images/image1png)
+         ![](images/image1.png)
      
 ### Creating Products, Profiles, and Payments
 
