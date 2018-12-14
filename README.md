@@ -93,12 +93,15 @@ module.exports = function (sequelize, DataTypes) {
     
             1. Change Get -> Post
             2. type: "http://localhost:3000/users/signup
-            3. switch none -> raw
+            3. switch Params -> Body
+            4. switch none -> raw
             
          ![](images/image1.png)
-    - Lastly, we need to add a header:
+    - Lastly, we need to add a key to Headers:
          ![](images/image2.png)
-     
+    - Now Press Send and you should see the following:
+         ![](images/image3.png)
+         
 ### Creating Products, Profiles, and Payments
 
 ### Signing up vs Logging in
