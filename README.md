@@ -89,7 +89,7 @@ module.exports = function (sequelize, DataTypes) {
 2. Here's the solution!
     - Open up the Postman Application
         You should see this:
-        ![alt text](https://files.slack.com/files-pri/TCA8DPKTN-FEUBP42NP/image.png "Default Postman View")
+        <a> href="https://files.slack.com/files-pri/TCA8DPKTN-FEUBP42NP/image.png"</a>
     - 
 ### Creating Products, Profiles, and Payments
 
