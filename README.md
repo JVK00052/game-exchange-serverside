@@ -89,7 +89,7 @@ module.exports = function (sequelize, DataTypes) {
 2. Here's the solution!
     - Open up the Postman Application
         You should see this:
-        ![](images/)
+        ![](images/image.png)
     - 
 ### Creating Products, Profiles, and Payments
 
