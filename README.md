@@ -65,7 +65,7 @@ Because this application has different levels of authorization I had to declare 
 
 1. To create an admin role you would need to set the ```isAdmin``` variable true. But how would one do that? If you look [below](#Model.1) you can see that within the model there is another variable called ```defaultValue``` which is set to ```false``` . How do we change that to true? 
     
-### Model.1
+# Model.1
 ```module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define('user', {
         username: { 
