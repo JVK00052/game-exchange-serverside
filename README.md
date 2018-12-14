@@ -5,7 +5,8 @@
 3. [Resources Used](#Resources)
 4. [Running Hosted](#Hosted)
 5. [Running Locally](#Locally)
-6. [Contact Me](#Contact)
+6. [Tutorials](#Tutorials)
+7. [Contact Me](#Contact)
 
 # Prerequisites
 - Code Editor Used: [Visual Studio Code](https://code.visualstudio.com/download)
