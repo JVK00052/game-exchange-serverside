@@ -63,10 +63,12 @@ This application handles many web development processes such as Admin vs User ro
 
 Because this application has different levels of authorization I had to declare a variable within the create model of users. This variable was called ```isAdmin``` .
 
-1. To create an admin role you would need to set the ```isAdmin``` variable true. But how would one do that? If you look [below](#Model.1) you can see that within the model there is another variable called ```defaultValue``` which is set to ```false``` . How do we change that to true? 
+1. To create an admin role you would need to set the ```isAdmin``` variable true. But how would one do that? If you look below at model.1 you can see that within the model there is another variable called ```defaultValue``` which is set to ```false``` . How do we change that to true? 
     
-# Model.1
-```module.exports = function (sequelize, DataTypes) {
+### Model.1 - auth.js
+
+```
+module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define('user', {
         username: { 
             type: DataTypes.STRING,
@@ -83,14 +85,12 @@ Because this application has different levels of authorization I had to declare 
             defaultValue: false,
         }
     });
-    User.associate = models => {
-        User.hasMany(models, {foreignKey: ['payment']})
-     }
-    return User
-} ``` 
-
-2. 
- 
+```
+2. Here's the solution!
+    - Open up the Postman Application
+        You should see this:
+        [alt text](https://files.slack.com/files-pri/TCA8DPKTN-FEUBP42NP/image.png)
+    - 
 ### Creating Products, Profiles, and Payments
 
 ### Signing up vs Logging in
@@ -101,3 +101,5 @@ Because this application has different levels of authorization I had to declare 
 ### Report a problem or bug?
 
 Thank you for viewing this application. I hope you found this informative and instructive. Email me at JVK00052@gmail.com if you have any questions or problems.
+    
+
