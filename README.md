@@ -87,8 +87,10 @@ Because this application has different levels of authorization I had to declare 
         User.hasMany(models, {foreignKey: ['payment']})
      }
     return User
-}``` .
-  
+} ``` 
+
+2. 
+ 
 ### Creating Products, Profiles, and Payments
 
 ### Signing up vs Logging in
